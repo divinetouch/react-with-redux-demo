@@ -43,7 +43,7 @@
   },
   "author": "Divine Touch",
   "license": "MIT",
-  "description": "This is a simple react-webpack boilerplate that can be used as a quick prototype without having to set everything up frome scratch everytime.",
+  "description": "This is a simple react with redux demo project that I created to learn React and Redux.",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/divinetouch/react-with-redux-demo.git"
