@@ -1,0 +1,12 @@
+{
+    "libs": [
+        "browser"
+    ],
+    "loadEagerly": [
+        "./node_modules/react/dist/react.js",
+        "./app/**/*.js"
+    ],
+    "plugins": {
+        "node": {}
+    }
+}
