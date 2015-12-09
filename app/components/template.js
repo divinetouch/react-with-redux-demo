@@ -1,5 +1,6 @@
 import React from 'react';
-import {Navbar, Grid, Nav, NavItem} from 'react-bootstrap';
+import {Navbar, Grid, Nav, Col, Jumbotron, NavItem} from 'react-bootstrap';
+import BreadCrumb from './breadcrumb/breadcrumb';
 
 
 class Template extends React.Component {
@@ -31,6 +32,10 @@ class Template extends React.Component {
                         </Navbar.Collapse>
                     </Navbar>
                     <div>
+                        <Jumbotron style={{textAlign: 'center'}}>
+                            <h2>Welcome to React with React-Redux Demo</h2>
+                        </Jumbotron>
+                        <BreadCrumb />
                         {this.props.children}
                     </div>
                 </Grid>

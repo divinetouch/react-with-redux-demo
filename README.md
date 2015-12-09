@@ -10,6 +10,6 @@ This project uses react version 0.14.X, ECMASCRIPT 2016 (ES6), react-redux, reac
 1. Clone this project: ```git@github.com:divinetouch/react-with-redux-demo.git```
 2. Go to the project folder/directory: ```cd react-with-redux-demo```
 3. Run npm install: ```npm install```
-4. Start the server: ```npm start``` or ```webpack-dev-server```
+4. Start the server: ```npm start```
 
 - to build the project, simply execute the command : ```webpack``` (for production: ```webpack -p```)

@@ -8,6 +8,7 @@ import Home from '../views/home';
 import About from '../views/about';
 import Contact from '../views/Contact';
 import Item from '../views/item';
+import Checkout from '../views/checkout';
 import Template from './template';
 import {Router, Route, IndexRoute} from 'react-router';
 import { connect } from 'react-redux';
@@ -22,9 +23,10 @@ class App extends React.Component {
                     <Router>  
                         <Route path="/" component={Template}>
                             <IndexRoute component={Home} />
-                            <Route path="/about" component={About} />
-                            <Route path="/contact" component={Contact} />
-                            <Route path="/item/:id" component={Item} />
+                            <Route path="about" component={About} />
+                            <Route path="contact" component={Contact} />
+                            <Route path="item/:id" component={Item} />
+                            <Route path="checkout" component={Checkout} />
                         </Route>
                     </Router>
                 );

@@ -3,9 +3,12 @@ var webpack = require('webpack');
 
 module.exports = {
     context: path.resolve('app'), 
-    entry: './main.js',
+    devtool: 'eval',
+    entry: [
+        './main.js'
+    ],
     output: {
-        path: path.resolve('dist'),
+        path: path.join(__dirname, 'dist'),
         filename: 'bundle.js'
     },
     devServer: {
@@ -17,10 +20,7 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: [/node_modules/,/bower_components/],
-                loader: 'babel',
-                query: { 
-                    presets: ['react', 'stage-2', 'es2015']
-                }
+                loaders: ['react-hot', 'babel']
             },
             {
                 test: /\.css$/,
@@ -42,7 +42,8 @@ module.exports = {
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery'
-        }) 
+        }),
+        new webpack.HotModuleReplacementPlugin() 
     ],
     eslint: {
         configFile: '/.eslintrc'

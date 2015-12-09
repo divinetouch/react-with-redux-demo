@@ -31,7 +31,7 @@ const CartAPI = {
 
     getTotal(cartItems, total=0) { 
         cartItems.forEach(item => { 
-           total += item.quantity * item.cost; 
+            total += item.quantity * item.cost; 
         });
 
         return total;

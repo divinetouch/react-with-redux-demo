@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server --hot"
   },
   "keywords": [
     "react",
@@ -24,21 +24,21 @@
     "imports-loader": "^0.6.5",
     "node-sass": "^3.4.2",
     "raw-loader": "^0.5.1",
+    "react-hot-loader": "^1.3.0",
     "sass-loader": "^3.1.1",
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.6",
     "webpack-dev-server": "^1.12.1"
   },
   "dependencies": {
-    "history": "^1.13.1",
+    "history": "^1.15.0",
     "jquery": "^2.1.4",
     "react": "^0.14.3",
     "react-bootstrap": "^0.28.1",
     "react-dom": "^0.14.2",
     "react-redux": "^4.0.0",
-    "react-router": "^1.0.0",
+    "react-router": "^1.0.1",
     "redux": "^3.0.4",
-    "redux-react-router": "^1.0.0-beta3",
     "webpack": "^1.12.6"
   },
   "author": "Divine Touch",
