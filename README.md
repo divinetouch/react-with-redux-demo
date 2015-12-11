@@ -2,7 +2,7 @@
 
 This is a simple react with redux demo project that I created to learn React and Redux.
 
-This project uses react version 0.14.X, ECMASCRIPT 2016 (ES6), react-redux, react-router, react-bootstrap, and Webpack as the module bundler.
+This project uses react version 0.14.X, ECMASCRIPT 2015 (ES6), react-redux, react-router, react-bootstrap, and Webpack as the module bundler.
 
 ---
 # How to set up and run the project
