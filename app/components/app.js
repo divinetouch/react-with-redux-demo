@@ -11,11 +11,6 @@ import Item from '../views/item';
 import Checkout from '../views/checkout';
 import Template from './template';
 import {Router, Route, IndexRoute} from 'react-router';
-import { connect } from 'react-redux';
-
-let select = (state) => ({
-    reduxState: state
-});
 
 class App extends React.Component {
     render() {
@@ -33,8 +28,4 @@ class App extends React.Component {
     }
 }
 
-App.PropTypes = { 
-    reduxState: React.PropTypes.object
-};
-
-export default connect(select)(App);
+export default App;
