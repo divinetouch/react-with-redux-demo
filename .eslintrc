@@ -36,6 +36,13 @@
         "react"
     ],
     "globals": {
-        "React": true
+        "React": true,
+        "describe": true,
+        "expect": true,
+        "it": true,
+        "beforeEach": true,
+        "before": true,
+        "after": true,
+        "afterEach": true
     }
 }

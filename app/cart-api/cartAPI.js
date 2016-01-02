@@ -13,6 +13,9 @@ const CartAPI = {
         return cartItems.findIndex(cartItem => cartItem.id === item.id);
     },
 
+    /**
+     * Add an Item to a cart with a given quantity
+     */
     addToCart(cartItems, item, quantity) { 
         let index = this.findItemInCart(cartItems, item);
         if(index === -1) { 
@@ -24,6 +27,9 @@ const CartAPI = {
         } 
     },
 
+    /**
+     * Remove a given item from the shopping cart
+     */
     removeFromCart(cartItems, item) { 
         let index = this.findItemInCart(cartItems, item);
         return [...cartItems.slice(0, index), ...cartItems.slice(index+1)];
