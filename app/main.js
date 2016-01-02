@@ -1,8 +1,13 @@
+//BOOTSTRAP IMPORT
+import 'jquery';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.min.js';
+// BOOTSTRAP IMPORT END
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-import App from './components/app';
 import reducers from './reducers/reducers';
 import thunk from 'redux-thunk';
 import { logger } from './logger/logger';
