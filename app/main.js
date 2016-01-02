@@ -24,6 +24,7 @@ const history = createBrowserHistory();
 syncReduxAndRouter(history, store);
 
 // The first page the user first landed on
+// update that page to the application state
 store.dispatch(updateApplicationState({ 
     currentActiveRoute: store.getState().routing.path
 }));

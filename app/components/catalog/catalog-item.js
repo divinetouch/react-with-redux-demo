@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
-import { addToCart, removeFromCart } from '../../actions/actions';
+import { addToCart, removeFromCart } from '../../actions/cartAction';
 import { Link } from 'react-router';
 
 let mapStateToProps = (state) => ({ 

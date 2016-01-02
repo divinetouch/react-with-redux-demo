@@ -3,7 +3,7 @@
  * To test this I created a simple counter that will be combined with merchansize reducer.
  */
 import CartAPI from '../cart-api/cartAPI';
-import { ADD_TO_CART, REMOVE_FROM_CART } from '../actions/actions';
+import { ADD_TO_CART, REMOVE_FROM_CART } from '../actions/cartAction';
 import counterReducer from './counterReducer';
 import { combineReducers } from 'redux';
 import { routeReducer } from 'redux-simple-router';

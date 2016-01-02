@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { incrementCounter, decrementCounter } from '../actions/actions';
+import { incrementCounter, decrementCounter } from '../actions/countActions';
 import { Row, Col, Panel } from 'react-bootstrap';
 
 let mapStateToProps = (state) => ({ 
