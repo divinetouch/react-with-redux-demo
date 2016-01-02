@@ -7,6 +7,7 @@ import { ADD_TO_CART, REMOVE_FROM_CART } from '../actions/actions';
 import counterReducer from './counterReducer';
 import { combineReducers } from 'redux';
 import { routeReducer } from 'redux-simple-router';
+import updateApplicationStateReducer from './applicationStateReducer';
 
 /**
  * When we first land on the home page, this is the initial state
@@ -36,5 +37,6 @@ const merchandizeReducer = (state=initialState, action) => {
 export default combineReducers({ 
     merchandize: merchandizeReducer,
     counter: counterReducer,
-    routing: routeReducer
+    routing: routeReducer,
+    applicationState: updateApplicationStateReducer
 });

@@ -3,10 +3,12 @@ import {Navbar, Grid, Nav, Jumbotron, NavItem} from 'react-bootstrap';
 import BreadCrumb from './breadcrumb/breadcrumb';
 import { changeRoute } from '../actions/routeAction';
 import { connect } from 'react-redux';
+import { loadInitialData } from '../actions/loadDataFromServerAction';
+import LoadingModal from './modals/loadingModal';
 
 let mapStateToProps = (state) => ({ 
-    path: state.routing.path
-})
+    applicationIsReady: state.applicationState.isReady
+});
 
 class Template extends React.Component {
     constructor(props) {
@@ -16,6 +18,10 @@ class Template extends React.Component {
     transitionTo(path) {
         console.log('transition to: ' + path);
         this.props.dispatch(changeRoute(path));
+    }
+
+    componentWillMount() { 
+        this.props.dispatch(loadInitialData());
     }
 
     render() {
@@ -40,8 +46,13 @@ class Template extends React.Component {
                         <Jumbotron style={{textAlign: 'center'}}>
                             <h2>Welcome to React with React-Redux Demo</h2>
                         </Jumbotron>
-                        <BreadCrumb />
-                        {this.props.children}
+                        {this.props.applicationIsReady ?
+                            <div>
+                                <BreadCrumb />
+                                {this.props.children}
+                            </div>
+                            : <LoadingModal title="Simulate Loading Data From Server" />
+                        }
                     </div>
                 </Grid>
             );
