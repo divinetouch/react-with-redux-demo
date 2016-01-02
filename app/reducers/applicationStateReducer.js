@@ -13,7 +13,7 @@ export default(state=initialState, action) => {
             return Object.assign({}, { 
                 ...state,
                 isReady: action.args.isReady ? action.args.isReady : state.isReady,
-                currentActiveRoute: action.args.currentActiveRoute ? action.args.currentActiveRoute : state.currentActiveRoute,
+                currentActiveRoute: action.args.currentActiveRoute ? action.args.currentActiveRoute.replace(/\/|#/g,'') : state.currentActiveRoute,
                 hasError: action.args.hasError ? action.args.hasError : state.hasError,
                 errorMessage: action.args.errorMessage ? action.args.errorMessage: state.errorMessage
             });

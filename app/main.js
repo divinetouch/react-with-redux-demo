@@ -13,6 +13,7 @@ import thunk from 'redux-thunk';
 import { logger } from './logger/logger';
 import { syncReduxAndRouter } from 'redux-simple-router';
 import createBrowserHistory from 'history/lib/createBrowserHistory';
+import { updateApplicationState } from './actions/applicationStateAction';
 
 import * as View from './views';
 import Template from './components/template';
@@ -21,6 +22,11 @@ import {Router, Route, IndexRoute} from 'react-router';
 const store = applyMiddleware(logger, thunk)(createStore)(reducers);
 const history = createBrowserHistory();
 syncReduxAndRouter(history, store);
+
+// The first page the user first landed on
+store.dispatch(updateApplicationState({ 
+    currentActiveRoute: store.getState().routing.path
+}));
 
 ReactDOM.render(
         <Provider store={ store }>
