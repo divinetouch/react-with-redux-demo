@@ -15,7 +15,7 @@ import {Router, Route, IndexRoute} from 'react-router';
 class App extends React.Component {
     render() {
         return (
-                    <Router>  
+                    <Router history={ this.props.reouteHistory }>  
                         <Route path="/" component={Template}>
                             <IndexRoute component={Home} />
                             <Route path="about" component={About} />

@@ -13,7 +13,8 @@ module.exports = {
     },
     devServer: {
         inline: true,
-        contentBase: 'dist'
+        contentBase: 'dist',
+        historyApiFallback: true
     },
     module: {
         loaders: [

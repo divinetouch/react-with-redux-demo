@@ -1,7 +1,12 @@
 import React from 'react';
-import {Navbar, Grid, Nav, Col, Jumbotron, NavItem} from 'react-bootstrap';
+import {Navbar, Grid, Nav, Jumbotron, NavItem} from 'react-bootstrap';
 import BreadCrumb from './breadcrumb/breadcrumb';
+import { changeRoute } from '../actions/routeAction';
+import { connect } from 'react-redux';
 
+let mapStateToProps = (state) => ({ 
+    path: state.routing.path
+})
 
 class Template extends React.Component {
     constructor(props) {
@@ -10,7 +15,7 @@ class Template extends React.Component {
 
     transitionTo(path) {
         console.log('transition to: ' + path);
-        this.context.history.pushState(null, path);
+        this.props.dispatch(changeRoute(path));
     }
 
     render() {
@@ -44,8 +49,4 @@ class Template extends React.Component {
 
 }
 
-Template.contextTypes = {
-    history: React.PropTypes.object.isRequired
-};
-
-export default Template;
+export default connect(mapStateToProps)(Template);
