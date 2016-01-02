@@ -1,7 +1,6 @@
 import React from 'react';
-import ContactInfo from '../components/sections/contactInfo';
-import ShoppingCart from '../components/cart/shoppingCart.js';
 import { Row, Col } from 'react-bootstrap';
+import Sidebar from '../components/sidebar/sidebar';
 
 //This is what we call a stateless compoenent
 export default () => {
@@ -60,8 +59,7 @@ export default () => {
                         </Col>
                     </Col>
                     <Col sm={ 3 }>
-                        <ShoppingCart />
-                        <ContactInfo />
+                        <Sidebar />
                     </Col>
                 </Row>
             );

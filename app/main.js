@@ -37,6 +37,7 @@ ReactDOM.render(
                     <Route path="contact" component={ View.Contact } />
                     <Route path="item/:id" component={ View.Item } />
                     <Route path="checkout" component={ View.Checkout } />
+                    <Route path="/*" component={ View.PageNotFound } />
                 </Route>
             </Router>
         </Provider>, 

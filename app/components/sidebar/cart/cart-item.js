@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { removeFromCart } from '../../actions/actions';
+import { removeFromCart } from '../../../actions/actions';
 
 export default class CartItem extends React.Component { 
     constructor(props) { 

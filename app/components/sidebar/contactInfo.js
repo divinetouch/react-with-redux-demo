@@ -1,5 +1,5 @@
 import React from 'react';
-import { Panel, Col } from 'react-bootstrap';
+import { Panel } from 'react-bootstrap';
 
 /**
  * This is called a headless/stateless component.
@@ -8,11 +8,11 @@ import { Panel, Col } from 'react-bootstrap';
  */
 export default() => { 
     return (
-                <Col sm={ 12 }>
+                <div>
                     <Panel header="Contact Information">
                         <span className="glyphicon glyphicon-phone"> 888-888-8888</span>
                         <span className="glyphicon glyphicon-phone-alt"> 888-888-8888</span>
                     </Panel>
-                </Col>
+                </div>
             );
 };

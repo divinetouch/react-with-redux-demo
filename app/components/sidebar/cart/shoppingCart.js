@@ -1,8 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import CartItems from './cart-items';
-import CartAPI from '../../cart-api/cartAPI';
-import { Col } from 'react-bootstrap';
+import CartAPI from '../../../cart-api/cartAPI';
 import { Link } from 'react-router';
 
 let mapStateToProps = (state) => ({ 
@@ -12,7 +11,7 @@ let mapStateToProps = (state) => ({
 class ShoppingCart extends React.Component { 
     render() {
         return (
-                    <Col sm={ 12 }>
+                    <div>
                         <div className="panel panel-default">
                             <div className="panel-heading">
                                 Shopping Cart <span className="glyphicon glyphicon-tags"></span>
@@ -23,7 +22,7 @@ class ShoppingCart extends React.Component {
                                 <Link to="/checkout" className="col-sm-12 btn btn-success">Check Out</Link>
                             </div>
                         </div>
-                    </Col>
+                    </div>
                 );
     }
 }

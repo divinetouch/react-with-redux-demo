@@ -1,9 +1,7 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import ShoppingCart from '../components/cart/shoppingCart';
-import ContactInfo from '../components/sections/contactInfo';
 import Catalog from '../components/catalog/cartalog';
 import { Row, Col } from 'react-bootstrap';
+import Sidebar from '../components/sidebar/sidebar';
 
 /**
  * we want to get the whole state tree just for testing purposes. 
@@ -33,8 +31,7 @@ class Home extends React.Component {
                             <Catalog />
                         </Col>
                         <Col sm={ 3 }>
-                            <ShoppingCart />
-                            <ContactInfo />
+                            <Sidebar />
                         </Col>
                     </Row>
                 );
