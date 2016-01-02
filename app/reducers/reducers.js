@@ -19,18 +19,13 @@ let initialState = {
 const merchandizeReducer = (state=initialState, action) => { 
     switch (action.type) {
         case ADD_TO_CART:
-            console.log('add to cart action');
-            console.log('item: ' + JSON.stringify(action.item));
             return Object.assign({},
-                    {
-                        ...state,
-                        cartItems: CartAPI.addToCart(state.cartItems, action.item, action.quantity)
-                    }
-                );
+                {
+                    ...state,
+                    cartItems: CartAPI.addToCart(state.cartItems, action.item, action.quantity)
+                }
+            );
         case REMOVE_FROM_CART:
-            console.log('remove from cart action');
-            console.log('item: ' + JSON.stringify(action.item));
-            console.log(Object.assign({}, { ...state, cartItems: CartAPI.removeFromCart(state.cartItems, action.item), shouldResetItem: action.item}));
             return Object.assign({}, { ...state, cartItems: CartAPI.removeFromCart(state.cartItems, action.item), shouldResetItem: action.item});
         default:
             return state;
