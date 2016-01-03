@@ -21,6 +21,7 @@
     "eslint-loader": "^1.1.1",
     "eslint-plugin-react": "^3.10.0",
     "expect": "^1.13.4",
+    "expect-jsx": "^2.2.1",
     "file-loader": "^0.8.4",
     "imports-loader": "^0.6.5",
     "mocha": "^2.3.4",
