@@ -60,16 +60,18 @@ class CatalogItem extends React.Component {
             return optionTags;
         };
         return  (
-                    <tr key={ this.props.item.id }>
-                        <td>{ this.props.item.id }</td>
-                        <td>{ this.props.item.name } <span><Link to={ `item/${this.props.item.id}` }>Detail</Link></span></td>
-                        <td>{ this.props.item.cost }</td>
-                        <td>
-                            <select value={ this.state.selectedValue } ref={ this.props.item.id } onChange={ this.change }>
-                                { options() }
-                            </select>
-                        </td>
-                    </tr>
+                    <div>
+                        <tr key={ this.props.item.id }>
+                            <td>{ this.props.item.id }</td>
+                            <td>{ this.props.item.name } <span><Link to={ `item/${this.props.item.id}` }>Detail</Link></span></td>
+                            <td>{ this.props.item.cost }</td>
+                            <td>
+                                <select value={ this.state.selectedValue } ref={ this.props.item.id } onChange={ this.change }>
+                                    { options() }
+                                </select>
+                            </td>
+                        </tr>
+                    </div>
                 );
     }
 }

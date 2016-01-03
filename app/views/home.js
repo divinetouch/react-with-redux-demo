@@ -1,5 +1,5 @@
 import React from 'react';
-import Catalog from '../components/catalog/cartalog';
+import Catalog from '../components/catalog/catalog';
 import { Row, Col } from 'react-bootstrap';
 import Sidebar from '../components/sidebar/sidebar';
 
