@@ -17,6 +17,5 @@ This project uses react version 0.14.X, ECMASCRIPT 2015 (ES6), react-redux, reac
 # How to run test
 
 1. go to the project folder/directory
-2. execut a command: ```npm test```
-
-**NOTE:** The test is running with watch mode on, to remove watch mode please go to package.json file and remove *-w* from the mocha test command.
+2. To run test once, execute a command: ```npm run test```
+3. To run test and watch for change, execute a command: ```npm run test-w```
