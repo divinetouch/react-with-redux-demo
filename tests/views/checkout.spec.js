@@ -8,11 +8,28 @@ import reducers from '../../app/reducers/reducers';
 expect.extend(expectJSX);
 
 describe('checkout page component', () => { 
+    let store = createStore(reducers);
+    let item = { 
+        id: 1,
+        name: 'item 1',
+        cost: 5,
+        description: 'this is item 1'
+    };
+
+
+
     it('should render checkout page', () => { 
+
+        store.dispatch({ 
+            type: 'ADD_TO_CART',
+            item: item,
+            quantity: 5
+        });
+
         const renderer = TestUtils.createRenderer();
-        renderer.render(<Checkout store={ createStore(reducers) } />);
+        renderer.render(<Checkout store={ store } />);
         const actual = renderer.getRenderOutput();
-        const expected = '<CheckoutItem />';
+        const expected = 'this is item 1';
 
         expect(actual).toIncludeJSX(expected);
     });
