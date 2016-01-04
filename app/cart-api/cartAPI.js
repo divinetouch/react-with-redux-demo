@@ -32,7 +32,11 @@ const CartAPI = {
      */
     removeFromCart(cartItems, item) { 
         let index = this.findItemInCart(cartItems, item);
-        return [...cartItems.slice(0, index), ...cartItems.slice(index+1)];
+        if(index > -1) {
+            return [...cartItems.slice(0, index), ...cartItems.slice(index+1)];
+        } else { 
+            return cartItems;
+        }
     },
 
     getTotal(cartItems, total=0) { 

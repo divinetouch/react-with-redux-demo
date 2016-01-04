@@ -33,6 +33,17 @@ describe('Test Cart Api', () => {
         expect(0).toEqual(actual.length);
     });
 
+    it('should do nothing when remove item that is not in the cart', () => { 
+        let items = CartAPI.addToCart(cartItems, item, 5);
+        let actual = CartAPI.removeFromCart(items, { 
+            name: 'item 2',
+            id: 2,
+            cost: 4
+        });
+
+        expect(1).toEqual(actual.length);
+    });
+
     it('should calculate total cost of items in the cart', () => { 
         let items = CartAPI.addToCart(cartItems, item, 5);
         let actual = CartAPI.getTotal(items);
